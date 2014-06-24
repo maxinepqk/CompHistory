@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Interactive Fiction</title>
+    <link href="main.css" rel="stylesheet" />
+</head>
+
+<body>
+<div id="player_inventory">
+  <span class="item-container"><h3>Inventory:</h3>
+    <div class="inventory-box empty"></div>
+    <div class="inventory-box empty"></div>
+    <div class="inventory-box empty"></div>
+  </span>
+</div>
+<div id="steps-taken">
+  <h3>Steps Taken:</h3>
+  <ul id='steps'>
+  </ul>
+</div>
+
+<div id="impress">
+    <div id="slide1" class="step slide">
+      <div class="slide-text">
+        <p>In 1939, George Stiblitz developed the first calculator, a stepping stone to the first computer. The calculator is a very important invention.</p>
+        <p><a href='#slide2'>FLIP</a> it.</p>
+        <p><a href='#slide3'>WAIT</a> until 1944, for the first computer that was invented at Harvard University.</p>
+        <div class="event-text"></div>
+     </div>
+     <div class="menu item-container"><div class="inventory-box"><img src="bat.png" alt="mouse" class="item" id="bat"></div></div>
+    </div>
+    <div id="slide2" class="step slide" data-x="1500">
+      <div class="slide-text">
+        <p>In 1950, the first digital computer was invented in Japan. This will allow more data to be released and read easily.</p>
+        <div class="event-text"></div>
+      </div>
+      <div class="menu"><div class="inventory-box"><img src="dino.png" alt="computer" class="item" id="dino"></div></div>
+    </div>
+    <div id="slide3" class="step slide" data-x="-1500">
+      <div class="slide-text">
+        <p>THE FIRST VIDEO GAME IN 1972! A BOY'S DREAM!!!! It is a fun application making computers more popular.</p>
+        <p>In 1975, Altair invents the first portable computer.</p>
+        <p>The World wide Web was launched in August 6 1991. Information can now be passed around the world in less than seconds.</p>
+        <div class="event-text"></div>
+      </div>
+      <div class="menu"><a href="#" onclick='location = window.location.pathname; return false;'>START OVER</a></div>
+      </div>
+</div>
+
+<script src="impress.js"></script>
+<script>impress().init();</script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script>!window.jQuery && document.write('<script src="jquery-1.4.1.min.js"><\/script>')</script>
+<script src="jquery.raptorize.1.0.js"></script>
+
+<script src="game.js"></script>
+<script src="dragDrop.js"></script>
+
+</body>
+</html>
